@@ -1,0 +1,117 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.about {
+    padding: 80px 0;
+    background-color: var(--white);
+
+    .container {
+        @include container;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+}
+
+.imageContainer {
+    .placeholderImage {
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(135deg, var(--secondary-color), #e0e0e0);
+        border-radius: 15px;
+        @include flex-center;
+        flex-direction: column;
+        color: var(--text-light);
+        font-size: 1.25rem;
+        font-weight: 500;
+        border: 3px dashed var(--text-light);
+
+        @include mobile {
+            height: 250px;
+            order: -1; // Image appears first on mobile
+        }
+    }
+}
+
+.content {
+    .title {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .subtitle {
+        color: var(--primary-color);
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        font-style: italic;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    .text {
+        margin-bottom: 2.5rem;
+
+        p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .stats {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @include mobile {
+            justify-content: space-around;
+            gap: 1rem;
+        }
+    }
+
+    .stat {
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+
+    @include mobile {
+        text-align: center;
+    }
+}
