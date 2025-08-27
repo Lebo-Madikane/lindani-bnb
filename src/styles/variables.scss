@@ -1,0 +1,22 @@
+
+// Colors (based on Figma design)
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #f5f5f5;
+    --accent-color: #d4a574;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --success: #28a745;
+    --error: #dc3545;
+}
+
+// Typography
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+
+// Breakpoints 
+$mobile: 768px !default;
+$tablet: 1024px !default;
+$desktop: 1200px !default;
