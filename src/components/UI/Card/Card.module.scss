@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &.shadow {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Variants
+.default {
+    border: 1px solid var(--secondary-color);
+}
+
+.primary {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, var(--white), #f8f9fa);
+}
+
+.accent {
+    background: linear-gradient(135deg, var(--accent-color), #e6b886);
+    color: var(--white);
+}
+
+// Padding variants
+.small {
+    padding: 1rem;
+}
+
+.medium {
+    padding: 1.5rem;
+}
+
+.large {
+    padding: 2rem;
+}
