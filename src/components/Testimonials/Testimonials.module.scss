@@ -1,0 +1,214 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--white);
+
+    .container {
+        @include container;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .title {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+
+    .subtitle {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+
+// Featured Testimonial
+.featuredTestimonial {
+    margin-bottom: 2rem;
+}
+
+.featuredCard {
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.featuredContent {
+    text-align: center;
+
+    .stars {
+        font-size: 1.5rem;
+        color: #ffd700;
+        margin-bottom: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+        font-style: italic;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.95);
+
+        @include mobile {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        @include flex-center;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--white);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .authorInfo {
+        text-align: left;
+
+        h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+    }
+}
+
+// Navigation Dots
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.navDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+
+    &.active {
+        background: var(--accent-color);
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// All Testimonials Grid
+.allTestimonials {
+    .gridTitle {
+        text-align: center;
+        font-size: 1.75rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+}
+
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.testimonialCard {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.cardContent {
+    .stars {
+        color: #ffd700;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .testimonialText {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+}
+
+.authorSmall {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .avatarSmall {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        color: var(--white);
+        @include flex-center;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    h5 {
+        color: var(--text-dark);
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+    }
+
+    span {
+        color: var(--text-light);
+        font-size: 0.8rem;
+    }
+}
