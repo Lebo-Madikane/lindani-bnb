@@ -5,6 +5,7 @@ import Services from '../components/Services/Services'
 import Amenities from '@/components/Amenities/Amenities'
 import Highlights from '@/components/Highlights/Highlights'
 import Testimonials from '@/components/Testimonials/Testimonials'
+import ContactForm from '@/components/ContactForm/ContactForm'
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         <Amenities />
         <Highlights />
         <Testimonials />
+        <ContactForm />
       </main>
     </>
   )
