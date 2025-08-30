@@ -1,0 +1,266 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.amenities {
+    padding: 80px 0;
+    background-color: var(--white);
+
+    .container {
+        @include container;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .title {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+
+    .subtitle {
+        color: var(--text-light);
+        font-size: 1.125rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+
+// Section Titles
+.sectionTitle {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}
+
+// Featured Amenities Section
+.featuredSection {
+    margin-bottom: 4rem;
+}
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.featuredCard {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(212, 165, 116, 0.3);
+    }
+}
+
+// Regular Amenities Section
+.regularSection {
+    margin-bottom: 4rem;
+}
+
+.regularGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.regularCard {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// Card Content Layouts
+.cardContent {
+    text-align: center;
+
+    .iconLarge {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        display: block;
+
+        @include mobile {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        color: var(--white);
+        margin-bottom: 1rem;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 1.25rem;
+        }
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+.cardContentCompact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .icon {
+        font-size: 2.5rem;
+        flex-shrink: 0;
+    }
+
+    .text {
+        flex: 1;
+
+        h4 {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+
+            @include mobile {
+                font-size: 1.1rem;
+            }
+        }
+
+        p {
+            color: var(--text-light);
+            line-height: 1.5;
+            margin: 0;
+            font-size: 0.9rem;
+
+            @include mobile {
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+// Call to Action Section
+.cta {
+    background: linear-gradient(135deg, var(--primary-color), #1a3f1d);
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--white);
+
+    @include mobile {
+        padding: 2rem 1rem;
+    }
+}
+
+.ctaContent {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @include mobile {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+.primaryBtn,
+.secondaryBtn {
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+
+    @include mobile {
+        padding: 0.875rem 1.5rem;
+    }
+}
+
+.primaryBtn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+
+    &:hover {
+        background-color: #c59660;
+        transform: translateY(-2px);
+    }
+}
+
+.secondaryBtn {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--primary-color);
+    }
+}
