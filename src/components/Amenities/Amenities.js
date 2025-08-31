@@ -75,36 +75,14 @@ export default function Amenities() {
         <section className={styles.amenities}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Premium Amenities</h2>
+                    <h2 className={styles.title}>Amenities</h2>
                     <p className={styles.subtitle}>
                         Enjoy world-class facilities designed for your comfort and convenience
                     </p>
                 </div>
 
-                {/* Featured Amenities */}
-                <div className={styles.featuredSection}>
-                    <h3 className={styles.sectionTitle}>Signature Features</h3>
-                    <div className={styles.featuredGrid}>
-                        {featuredAmenities.map((amenity) => (
-                            <Card
-                                key={amenity.id}
-                                variant="accent"
-                                padding="large"
-                                className={styles.featuredCard}
-                            >
-                                <div className={styles.cardContent}>
-                                    <div className={styles.iconLarge}>{amenity.icon}</div>
-                                    <h4>{amenity.title}</h4>
-                                    <p>{amenity.description}</p>
-                                </div>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-
                 {/* Regular Amenities */}
                 <div className={styles.regularSection}>
-                    <h3 className={styles.sectionTitle}>Additional Amenities</h3>
                     <div className={styles.regularGrid}>
                         {regularAmenities.map((amenity) => (
                             <Card

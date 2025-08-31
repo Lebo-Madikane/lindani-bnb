@@ -12,7 +12,7 @@
 
 .header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 
     .title {
         font-size: 2.5rem;
@@ -34,56 +34,6 @@
     }
 }
 
-// Section Titles
-.sectionTitle {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-    }
-
-    @include mobile {
-        font-size: 1.5rem;
-    }
-}
-
-// Featured Amenities Section
-.featuredSection {
-    margin-bottom: 4rem;
-}
-
-.featuredGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-
-    @include mobile {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
-
-.featuredCard {
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 30px rgba(212, 165, 116, 0.3);
-    }
-}
 
 // Regular Amenities Section
 .regularSection {
