@@ -23,17 +23,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
-                    <div className={styles.links}>
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/services">Services</Link></li>
-                            <li><Link href="/attractions">Attractions</Link></li>
-                            <li><Link href="#contact">Contact</Link></li>
-                        </ul>
-                    </div>
-
                     {/* Services */}
                     <div className={styles.links}>
                         <h4>Our Services</h4>
@@ -67,13 +56,6 @@ export default function Footer() {
                 <div className={styles.bottom}>
                     <div className={styles.bottomContent}>
                         <p>&copy; {currentYear} Lindani BnB. All rights reserved.</p>
-                        <div className={styles.legal}>
-                            <Link href="/privacy">Privacy Policy</Link>
-                            <Link href="/terms">Terms of Service</Link>
-                        </div>
-                        <p className={styles.developer}>
-                            Website by <Link href="https://lebo-madikane.github.io/portfolio/" target="_blank">Lebo Madikane</Link>
-                        </p>
                     </div>
                 </div>
             </div>

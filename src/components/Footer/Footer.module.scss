@@ -11,13 +11,12 @@
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
     padding: 3rem 0;
 
     @include mobile {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
         text-align: center;
     }
@@ -25,6 +24,12 @@
 
 // Brand Section
 .brand {
+    width: 30%;
+
+    @include mobile {
+        width: 100%;
+    }
+
     .logo {
         font-family: $font-secondary;
         font-size: 1.75rem;
@@ -62,6 +67,12 @@
 
 // Links Sections
 .links {
+    width: 30%;
+    text-align: center;
+    @include mobile {
+        width: 100%;
+    }
+
     h4 {
         color: var(--accent-color);
         font-size: 1.1rem;
@@ -92,6 +103,12 @@
 
 // Contact Section
 .contact {
+    width: 30%;
+    text-align: center;
+    @include mobile {
+        width: 100%;
+    }
+
     h4 {
         color: var(--accent-color);
         font-size: 1.1rem;
@@ -102,11 +119,18 @@
 
 .contactItem {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
 
     @include mobile {
         justify-content: center;
     }
+}
+
+
+//Bottom 
+
+.bottom {
+    text-align: center;
 }
