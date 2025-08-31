@@ -153,6 +153,10 @@
             text-align: center;
         }
     }
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .contactDetails {
