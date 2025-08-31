@@ -79,45 +79,9 @@ export default function Testimonials() {
                     </p>
                 </div>
 
-                {/* Featured Testimonial */}
-                <div className={styles.featuredTestimonial}>
-                    <Card variant="accent" padding="large" className={styles.featuredCard}>
-                        <div className={styles.featuredContent}>
-                            <div className={styles.stars}>
-                                {renderStars(testimonials[currentTestimonial].rating)}
-                            </div>
-                            <blockquote className={styles.quote}>
-                                "{testimonials[currentTestimonial].text}"
-                            </blockquote>
-                            <div className={styles.author}>
-                                <div className={styles.avatar}>
-                                    {testimonials[currentTestimonial].avatar}
-                                </div>
-                                <div className={styles.authorInfo}>
-                                    <h4>{testimonials[currentTestimonial].name}</h4>
-                                    <p>{testimonials[currentTestimonial].location}</p>
-                                    <span>{testimonials[currentTestimonial].date}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </Card>
-                </div>
-
-                {/* Testimonial Navigation */}
-                <div className={styles.navigation}>
-                    {testimonials.map((_, index) => (
-                        <button
-                            key={index}
-                            className={`${styles.navDot} ${index === currentTestimonial ? styles.active : ''}`}
-                            onClick={() => setCurrentTestimonial(index)}
-                            aria-label={`View testimonial ${index + 1}`}
-                        />
-                    ))}
-                </div>
 
                 {/* All Testimonials Grid (Desktop) */}
                 <div className={styles.allTestimonials}>
-                    <h3 className={styles.gridTitle}>More Happy Guests</h3>
                     <div className={styles.testimonialsGrid}>
                         {testimonials.slice(0, 3).map((testimonial) => (
                             <Card key={testimonial.id} variant="default" padding="medium" className={styles.testimonialCard}>
