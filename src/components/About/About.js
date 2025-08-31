@@ -5,6 +5,11 @@ export default function About() {
     return (
         <section className={styles.about}>
             <div className={styles.container}>
+                <div className={styles.content}>
+                    <h2 className={styles.title}>About Lindani BnB</h2>
+                    <p className={styles.subtitle}>Your Home Away From Home</p>
+                </div>
+
                 <div className={styles.imageContainer}>
                     <div className={styles.placeholderImage}>
                         <p>About Us</p>
@@ -13,9 +18,6 @@ export default function About() {
                 </div>
 
                 <div className={styles.content}>
-                    <h2 className={styles.title}>About Lindani BnB</h2>
-                    <p className={styles.subtitle}>Your Home Away From Home</p>
-
                     <div className={styles.text}>
                         <p>
                             Welcome to Lindani BnB, where luxury meets comfort in a serene

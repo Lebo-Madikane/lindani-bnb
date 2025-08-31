@@ -7,12 +7,13 @@
 
     .container {
         @include container;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
 
         @include mobile {
+            display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
         }
@@ -21,8 +22,9 @@
 
 .imageContainer {
     .placeholderImage {
-        width: 100%;
+        width: 70%;
         height: 400px;
+        margin: 0px auto;
         background: linear-gradient(135deg, var(--secondary-color), #e0e0e0);
         border-radius: 15px;
         @include flex-center;
@@ -33,6 +35,7 @@
         border: 3px dashed var(--text-light);
 
         @include mobile {
+            width: 100%;
             height: 250px;
             order: -1; // Image appears first on mobile
         }
@@ -40,6 +43,7 @@
 }
 
 .content {
+    
     .title {
         font-size: 2.5rem;
         color: var(--text-dark);
@@ -56,7 +60,6 @@
         color: var(--primary-color);
         font-size: 1.25rem;
         font-weight: 500;
-        margin-bottom: 2rem;
         font-style: italic;
 
         @include mobile {
@@ -65,7 +68,9 @@
     }
 
     .text {
+        width: 70%;
         margin-bottom: 2.5rem;
+        margin: 0px auto;
 
         p {
             color: var(--text-light);
@@ -76,14 +81,21 @@
                 margin-bottom: 0;
             }
         }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .stats {
+        width: 70%;
         display: flex;
+        justify-content: center;
         gap: 2rem;
-        margin-bottom: 2rem;
+        margin: 0px auto;
 
         @include mobile {
+            width: 100%;
             justify-content: space-around;
             gap: 1rem;
         }
