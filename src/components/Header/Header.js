@@ -22,7 +22,7 @@ export default function Header() {
                 <nav className={styles.nav}>
                     <Link href="/" className={styles.navLink}>Home</Link>
                     <Link href="/about" className={styles.navLink}>About</Link>
-                    <Link href="/rooms" className={styles.navLink}>Rooms</Link>
+                    <Link href="/services" className={styles.navLink}>Services</Link>
                     <Link href="/contact" className={styles.navLink}>Contact</Link>
                 </nav>
 
@@ -45,8 +45,8 @@ export default function Header() {
                     <Link href="/about" className={styles.mobileNavLink} onClick={toggleMenu}>
                         About
                     </Link>
-                    <Link href="/rooms" className={styles.mobileNavLink} onClick={toggleMenu}>
-                        Rooms
+                    <Link href="/services" className={styles.mobileNavLink} onClick={toggleMenu}>
+                        Services
                     </Link>
                     <Link href="/contact" className={styles.mobileNavLink} onClick={toggleMenu}>
                         Contact
