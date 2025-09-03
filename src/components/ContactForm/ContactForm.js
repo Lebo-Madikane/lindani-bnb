@@ -47,7 +47,7 @@ export default function ContactForm() {
     }
 
     return (
-        <section className={styles.contactForm}>
+        <section id='contactForm' className={styles.contactForm}>
             <div className={styles.container}>
                 <div className={styles.formSection}>
                     <div className={styles.formContent}>

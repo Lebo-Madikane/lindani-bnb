@@ -74,6 +74,7 @@
 }
 
 .imageContainer {
+
     .placeholderImage {
         width: 100%;
         height: 400px;
@@ -88,6 +89,18 @@
         @include mobile {
             height: 250px;
             font-size: 1.25rem;
+        }
+
+        .heroImage {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        
+            @include mobile {
+                max-height: 250px;
+                object-fit: cover;
+            }
         }
     }
 }

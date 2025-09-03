@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import Button from '../UI/Button/Button'
 import styles from './Hero.module.scss'
+import Image from 'next/image'
 
 export default function Hero() {
     return (
@@ -7,25 +9,28 @@ export default function Hero() {
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>
-                        Welcome to <span>Lindani BnB</span>
+                        Welcome to<br/> <span>LINDANI BNB</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Experience luxury and comfort in the heart of nature.
-                        Your perfect getaway awaits at our beautiful bed and breakfast.
+                        Your home, away from home
+                        in Elliotdale, Eastern Cape
                     </p>
                     <div className={styles.buttons}>
-                        <Button size="large" variant="primary">
-                            Book Now
-                        </Button>
-                        <Button size="large" variant="secondary">
-                            View Rooms
-                        </Button>
+                        <Link href='/#contactForm'>
+                            <Button size="large" variant="primary">
+                                Book Now
+                            </Button>
+                        </Link>
+                        <Link href='/services'>
+                            <Button size="large" variant="secondary">
+                                View Rooms
+                            </Button>
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.imageContainer}>
                     <div className={styles.placeholderImage}>
-                        <p>Hero Image</p>
-                        <p>Coming Soon</p>
+                        <Image src="/images/HeroImg.png" className={styles.heroImage} alt="Hero Image" width={150} height={50} priority={true} />
                     </div>
                 </div>
             </div>
