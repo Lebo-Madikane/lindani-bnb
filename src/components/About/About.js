@@ -3,7 +3,7 @@ import styles from './About.module.scss'
 
 export default function About() {
     return (
-        <section className={styles.about}>
+        <section id="about" className={styles.about}>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h2 className={styles.title}>About Lindani BnB</h2>
