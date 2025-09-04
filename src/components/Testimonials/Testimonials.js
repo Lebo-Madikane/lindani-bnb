@@ -9,29 +9,29 @@ export default function Testimonials() {
     const testimonials = [
         {
             id: 1,
-            name: "Sarah Johnson",
+            name: "Sipho K.",
             location: "Cape Town, SA",
             rating: 5,
-            text: "Absolutely incredible experience! The mountain views from our room were breathtaking, and the staff went above and beyond to make our anniversary special. The locally sourced breakfast was phenomenal.",
-            avatar: "SJ",
+            text: "We hosted a small workshop here and everything was perfect, from the conference space to the catering. Highly recommend.",
+            avatar: "SK",
             date: "August 2024"
         },
         {
             id: 2,
-            name: "Mike & Lisa Wilson",
+            name: "Thandi M.",
             location: "Johannesburg, SA",
             rating: 5,
-            text: "Perfect family getaway! Our kids loved the pool, and we appreciated the historic charm of the building. The concierge helped us discover amazing local attractions we never would have found.",
-            avatar: "MW",
+            text: "The room was very spotless, the bed was so comfortable, and the evironment was relaxed.",
+            avatar: "TM",
             date: "July 2024"
         },
         {
             id: 3,
-            name: "James Thompson",
-            location: "London, UK",
+            name: "Nomsa L",
+            location: "Eastern Cape, SA",
             rating: 5,
-            text: "Outstanding service and attention to detail. The personalized recommendations from the staff made our South African adventure unforgettable. Will definitely be returning!",
-            avatar: "JT",
+            text: "Friendly staff, fast WI-FI, and the shuttle service made my trip stress free. I'd definetly come back.",
+            avatar: "NL",
             date: "June 2024"
         },
         {
@@ -75,7 +75,7 @@ export default function Testimonials() {
                 <div className={styles.header}>
                     <h2 className={styles.title}>Guest Testimonials</h2>
                     <p className={styles.subtitle}>
-                        Hear what our guests say about their unforgettable experiences
+                        Hear what our guests say about their experiences
                     </p>
                 </div>
 
