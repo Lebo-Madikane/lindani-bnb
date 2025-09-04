@@ -7,6 +7,7 @@ export default function Highlights() {
 
     return (
         <section className={styles.highlights}>
+            <Image src='/images/HighlightsImage.jpg' className={styles.backgroundImage} alt='Hightlights Background Image' width={550} height={400} />
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>EXPLORE ELLIOTEDALE</h2>
@@ -17,7 +18,7 @@ export default function Highlights() {
 
                 <div className={styles.btnSection}>
                     <Link href="/attractions" >
-                        <Button size="large" variant="secondary">
+                        <Button size="large" variant="primary">
                             View Attractions
                         </Button>
                     </Link>

@@ -3,18 +3,41 @@
 
 .highlights {
     padding: 80px 0;
+    position: relative;
+    min-height: 800px;
     background: linear-gradient(135deg, #f8f9fa 0%, var(--secondary-color) 100%);
-    border: 2px solid red;
+
+    .backgroundImage {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 
     .container {
-        @include container;
+        min-height: 750px;
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mobile {
+            min-height: 450px;
+        }
     }
+
+    @include mobile {
+        min-height: 500px;
+    }
+
 }
 
 .header {
     text-align: center;
-    margin-bottom: 4rem;
-    border: 2px solid yellow;
 
     .title {
         font-size: 2.5rem;
@@ -23,6 +46,8 @@
         font-weight: 600;
 
         @include mobile {
+            width: 80%;
+            margin: 0px auto 6px;
             font-size: 2rem;
         }
     }
