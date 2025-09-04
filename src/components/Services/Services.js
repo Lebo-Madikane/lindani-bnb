@@ -10,39 +10,39 @@ export default function Services() {
     const services = [
         {
             id: 1,
-            title: "Room Service",
-            description: "24/7 room service with gourmet meals delivered directly to your room. Our experienced chefs prepare fresh, delicious meals.",
-            icon: "🍽️"
+            title: "Accommodation",
+            description: "Enjoy single or sharing stylish en-suite rooms designed for comfort, offering modern amenities and a peaceful, home-like atmosphere.",
+            icon: "🏠"
         },
         {
             id: 2,
-            title: "Housekeeping",
-            description: "Daily housekeeping service ensuring your room stays pristine throughout your stay with eco-friendly products.",
-            icon: "🧹"
+            title: "Catering",
+            description: "Choose from delicious catered meals or enjoy independence with our fully equipped self-catering options.",
+            icon: "🍽️"
         },
         {
             id: 3,
-            title: "Concierge",
-            description: "Personal concierge service to help you discover local attractions, book tours, and make restaurant reservations.",
-            icon: "🛎️"
+            title: "Conference Facilities",
+            description: "Host productive meetings or events in our well-equipped conference spaces with modern technology and support.",
+            icon: "📆"
         },
         {
             id: 4,
-            title: "Airport Transfer",
-            description: "Complimentary airport pickup and drop-off service in our luxury vehicles for a stress-free arrival and departure.",
+            title: "Shuttle Services",
+            description: "Convenient, reliable shuttle service for guests, ensuring safe travel to nearby attractions and essential destinations.",
             icon: "🚗"
         },
         {
             id: 5,
             title: "Laundry Service",
-            description: "Professional laundry and dry cleaning service with same-day turnaround for your convenience.",
+            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
             icon: "👕"
         },
         {
             id: 6,
-            title: "Tour Guide",
-            description: "Expert local tour guides to help you explore hidden gems and experience authentic local culture.",
-            icon: "🗺️"
+            title: "Goods & Services",
+            description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
+            icon: "🛍️"
         }
     ]
 
@@ -82,7 +82,8 @@ export default function Services() {
                 <div className={styles.header}>
                     <h2 className={styles.title}>Our Services</h2>
                     <p className={styles.subtitle}>
-                        We provide exceptional services to make your stay memorable and comfortable
+                        At Lindani BnB, we go beyond offering a place to stay.
+                        We create an experience that blends comfort, convenience, and care.
                     </p>
                 </div>
 

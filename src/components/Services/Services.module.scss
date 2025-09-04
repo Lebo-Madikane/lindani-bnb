@@ -140,8 +140,13 @@
 
 // Service Card Content
 .serviceCard {
+    width: 90%;
     height: 100%;
     transition: all 0.3s ease;
+
+    @include mobile {
+        width: 100%;
+    }
 
     &:hover {
         transform: translateY(-5px);
