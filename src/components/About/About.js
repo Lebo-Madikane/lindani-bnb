@@ -1,4 +1,5 @@
 
+import Image from 'next/image'
 import styles from './About.module.scss'
 
 export default function About() {
@@ -6,35 +7,25 @@ export default function About() {
         <section id="about" className={styles.about}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <h2 className={styles.title}>About Lindani BnB</h2>
-                    <p className={styles.subtitle}>Your Home Away From Home</p>
+                    <h2 className={styles.title}>About Us</h2>
+                    <p className={styles.subtitle}>Nestled in the hills of Elliotdale, Lindani BnB offers warm hospitality, stylish comfort, and a touch of home in the Eastern Cape. Founded and proudly owned by Lindani Mahlungu.</p>
                 </div>
 
                 <div className={styles.imageContainer}>
                     <div className={styles.placeholderImage}>
-                        <p>About Us</p>
-                        <p>Image</p>
+                        <Image src='/images/AboutImg.webp' alt='About Us Image' className={styles.aboutImage} width={550} height={400} priority={true} />
                     </div>
                 </div>
 
                 <div className={styles.content}>
                     <div className={styles.text}>
                         <p>
-                            Welcome to Lindani BnB, where luxury meets comfort in a serene
-                            natural setting. Our beautiful bed and breakfast has been
-                            thoughtfully designed to provide you with an unforgettable
-                            experience.
+                            Whether you’re here for leisure, business, or a quick stop along your journey,
+                            our en-suite bedrooms  and self-catering unit options promise an unforgettable stay.
                         </p>
                         <p>
-                            Nestled in the heart of nature, we offer our guests a perfect
-                            blend of modern amenities and rustic charm. Every detail has
-                            been carefully crafted to ensure your stay is both comfortable
-                            and memorable.
-                        </p>
-                        <p>
-                            Whether you're here for a romantic getaway, family vacation,
-                            or business retreat, our dedicated team is committed to making
-                            your stay exceptional.
+                            At Lindani BnB, we believe that travel should feel like coming home,
+                            with a view, a smile, and a little bit of indulgence.
                         </p>
                     </div>
 

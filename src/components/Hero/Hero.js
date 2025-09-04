@@ -30,7 +30,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.imageContainer}>
                     <div className={styles.placeholderImage}>
-                        <Image src="/images/HeroImg.png" className={styles.heroImage} alt="Hero Image" width={150} height={50} priority={true} />
+                        <Image src="/images/HeroImg.png" className={styles.heroImage} alt="Hero Image" width={550} height={400} priority={true} />
                     </div>
                 </div>
             </div>
