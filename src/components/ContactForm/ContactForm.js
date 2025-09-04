@@ -209,21 +209,21 @@ export default function ContactForm() {
                                 <div className={styles.contactIcon}>📞</div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>+27 123 456 7890</p>
+                                    <p>047 5770 268</p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>
                                 <div className={styles.contactIcon}>📧</div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>hello@lindanibnb.co.za</p>
+                                    <p>lindanibnb@gmail.com</p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>
                                 <div className={styles.contactIcon}>📍</div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>123 Mountain View Road<br />Scenic Valley, South Africa</p>
+                                    <p>Elliotdale, 5070, Eastern Cape<br /> South Africa</p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>

@@ -12,7 +12,7 @@ export default function Footer() {
                     <div className={styles.brand}>
                         <h3 className={styles.logo}>Lindani BnB</h3>
                         <p className={styles.description}>
-                            Experience luxury and comfort in the heart of nature.
+                            Experience comfort in the heart of Eastern Cape.
                             Your perfect getaway awaits at our beautiful bed and breakfast.
                         </p>
                         <div className={styles.social}>
@@ -27,10 +27,11 @@ export default function Footer() {
                     <div className={styles.links}>
                         <h4>Our Services</h4>
                         <ul>
-                            <li><a href="#services">Room Service</a></li>
-                            <li><a href="#services">Concierge</a></li>
-                            <li><a href="#services">Airport Transfer</a></li>
-                            <li><a href="#services">Tour Guide</a></li>
+                            <li><a href="#services">Accommodation</a></li>
+                            <li><a href="#services">Catering</a></li>
+                            <li><a href="#services">Shuttle Services</a></li>
+                            <li><a href="#services">Laundry</a></li>
+                            <li><a href="#services">Conference Facilities</a></li>
                         </ul>
                     </div>
 
@@ -39,15 +40,15 @@ export default function Footer() {
                         <h4>Contact Information</h4>
                         <div className={styles.contactItem}>
                             <span>📞</span>
-                            <p>+27 123 456 7890</p>
+                            <p>047 5770 268</p>
                         </div>
                         <div className={styles.contactItem}>
                             <span>📧</span>
-                            <p>hello@lindanibnb.co.za</p>
+                            <p>lindanibnb@gmail.com</p>
                         </div>
                         <div className={styles.contactItem}>
                             <span>📍</span>
-                            <p>123 Mountain View Road<br />Scenic Valley, South Africa</p>
+                            <p>Elliotdale, 5070, Eastern Cape<br />South Africa</p>
                         </div>
                     </div>
                 </div>
