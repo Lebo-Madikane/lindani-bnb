@@ -23,7 +23,7 @@ export default function Hero() {
                         </Link>
                         <Link href='/services'>
                             <Button size="large" variant="secondary">
-                                View Rooms
+                                View Services
                             </Button>
                         </Link>
                     </div>

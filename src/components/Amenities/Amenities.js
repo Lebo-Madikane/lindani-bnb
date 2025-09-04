@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Card from '../UI/Card/Card'
 import styles from './Amenities.module.scss'
 
@@ -26,9 +27,9 @@ export default function Amenities() {
         },
         {
             id: 4,
-            title: "Fitness Center",
-            description: "Modern gym equipment available 24/7",
-            icon: "🏋️‍♂️",
+            title: "Television",
+            description: "Entertainment available",
+            icon: "📺",
             featured: false
         },
         {
@@ -47,9 +48,9 @@ export default function Amenities() {
         },
         {
             id: 7,
-            title: "Garden Terrace",
+            title: "Braai Area",
             description: "Beautiful outdoor terrace with garden views",
-            icon: "🌿",
+            icon: "🥩",
             featured: false
         },
         {
@@ -77,7 +78,7 @@ export default function Amenities() {
                 <div className={styles.header}>
                     <h2 className={styles.title}>Amenities</h2>
                     <p className={styles.subtitle}>
-                        Enjoy world-class facilities designed for your comfort and convenience
+                        See what’s included
                     </p>
                 </div>
 
@@ -107,10 +108,14 @@ export default function Amenities() {
                 <div className={styles.cta}>
                     <div className={styles.ctaContent}>
                         <h3>Experience All Our Amenities</h3>
-                        <p>Ready to enjoy luxury at its finest?</p>
+                        <p>Ready to enjoy comfort at its finest?</p>
                         <div className={styles.ctaButtons}>
-                            <button className={styles.primaryBtn}>Book Your Stay</button>
-                            <button className={styles.secondaryBtn}>View Rooms</button>
+                            <Link href="/#contactForm">
+                                <button className={styles.primaryBtn}>Book Your Stay</button>
+                            </Link>
+                            <Link href="/services">
+                                <button className={styles.secondaryBtn}>View Services</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
