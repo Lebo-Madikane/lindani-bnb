@@ -19,6 +19,9 @@ export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState(null)
 
+    // Replace this with your actual Google Apps Script Web App URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyP-Y9zrO1YQ5fh2EUUHvOrOaFqY2tfzM6mSToIt9-MGv9MIKeLxixorba_5D9TWyc/exec'
+
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData(prev => ({
@@ -27,27 +30,96 @@ export default function ContactForm() {
         }))
     }
 
+    const validateForm = () => {
+        const { name, email, checkIn, checkOut } = formData
+
+        if (!name.trim()) {
+            alert('Please enter your full name')
+            return false
+        }
+
+        if (!email.trim()) {
+            alert('Please enter your email address')
+            return false
+        }
+
+        if (!checkIn) {
+            alert('Please select check-in date')
+            return false
+        }
+
+        if (!checkOut) {
+            alert('Please select check-out date')
+            return false
+        }
+
+        // Check if check-out is after check-in
+        if (new Date(checkOut) <= new Date(checkIn)) {
+            alert('Check-out date must be after check-in date')
+            return false
+        }
+
+        return true
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setIsSubmitting(true)
 
-        // Simulate form submission
+        // Validate form
+        if (!validateForm()) {
+            return
+        }
+
+        setIsSubmitting(true)
+        setSubmitStatus(null)
+
         try {
-            await new Promise(resolve => setTimeout(resolve, 2000))
-            setSubmitStatus('success')
-            setFormData({
-                name: '', email: '', phone: '', checkIn: '', checkOut: '',
-                guests: '2', roomType: 'standard', message: ''
+            // Submit to Google Sheets
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                mode: 'cors',
+                body: JSON.stringify(formData)
             })
+
+            const result = await response.json()
+
+            if (result.status === 'success') {
+                setSubmitStatus('success')
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    checkIn: '',
+                    checkOut: '',
+                    guests: '2',
+                    roomType: 'standard',
+                    message: ''
+                })
+
+                // Optional: Send confirmation email notification
+                // You can add email service here later
+
+            } else {
+                throw new Error(result.message || 'Submission failed')
+            }
+
         } catch (error) {
+            console.error('Error submitting form:', error)
             setSubmitStatus('error')
         } finally {
             setIsSubmitting(false)
         }
     }
 
+    // Get today's date for min date validation
+    const today = new Date().toISOString().split('T')[0]
+
     return (
-        <section id='contactForm' className={styles.contactForm}>
+        <section id='contact' className={styles.contactForm}>
             <div className={styles.container}>
                 <div className={styles.formSection}>
                     <div className={styles.formContent}>
@@ -72,6 +144,7 @@ export default function ContactForm() {
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Enter your full name"
+                                                disabled={isSubmitting}
                                             />
                                         </div>
                                         <div className={styles.field}>
@@ -84,6 +157,7 @@ export default function ContactForm() {
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="your.email@example.com"
+                                                disabled={isSubmitting}
                                             />
                                         </div>
                                     </div>
@@ -96,6 +170,7 @@ export default function ContactForm() {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="+27 123 456 7890"
+                                            disabled={isSubmitting}
                                         />
                                     </div>
                                 </div>
@@ -113,6 +188,8 @@ export default function ContactForm() {
                                                 value={formData.checkIn}
                                                 onChange={handleChange}
                                                 required
+                                                min={today}
+                                                disabled={isSubmitting}
                                             />
                                         </div>
                                         <div className={styles.field}>
@@ -124,6 +201,8 @@ export default function ContactForm() {
                                                 value={formData.checkOut}
                                                 onChange={handleChange}
                                                 required
+                                                min={formData.checkIn || today}
+                                                disabled={isSubmitting}
                                             />
                                         </div>
                                     </div>
@@ -135,6 +214,7 @@ export default function ContactForm() {
                                                 name="guests"
                                                 value={formData.guests}
                                                 onChange={handleChange}
+                                                disabled={isSubmitting}
                                             >
                                                 <option value="1">1 Guest</option>
                                                 <option value="2">2 Guests</option>
@@ -150,6 +230,7 @@ export default function ContactForm() {
                                                 name="roomType"
                                                 value={formData.roomType}
                                                 onChange={handleChange}
+                                                disabled={isSubmitting}
                                             >
                                                 <option value="standard">Standard Room</option>
                                                 <option value="deluxe">Deluxe Room</option>
@@ -171,6 +252,7 @@ export default function ContactForm() {
                                             onChange={handleChange}
                                             rows="4"
                                             placeholder="Any special requests or dietary requirements..."
+                                            disabled={isSubmitting}
                                         />
                                     </div>
                                 </div>
@@ -189,12 +271,12 @@ export default function ContactForm() {
                                 {/* Status Messages */}
                                 {submitStatus === 'success' && (
                                     <div className={styles.successMessage}>
-                                        ✅ Thank you! We'll contact you within 24 hours to confirm your booking.
+                                        ✅ Thank you! We've received your booking request and will contact you within 24 hours to confirm your reservation.
                                     </div>
                                 )}
                                 {submitStatus === 'error' && (
                                     <div className={styles.errorMessage}>
-                                        ❌ Something went wrong. Please try again or contact us directly.
+                                        ❌ Something went wrong while submitting your request. Please try again or contact us directly at lindanibnb@gmail.com
                                     </div>
                                 )}
                             </form>

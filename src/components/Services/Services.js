@@ -124,7 +124,7 @@ export default function Services() {
                                     <div key={service.id} className={styles.carouselSlide}>
                                         <Card variant="primary" padding="large" className={styles.serviceCard}>
                                             <div className={styles.cardContent}>
-                                                <Image src={service.image} className={styles.images} width={550} height={400} />
+                                                <Image alt='Service Image' src={service.image} className={styles.images} width={550} height={400} />
                                                 <h3>{service.title}</h3>
                                                 <p>{service.description}</p>
                                             </div>
