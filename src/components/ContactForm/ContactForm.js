@@ -19,8 +19,8 @@ export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState(null)
 
-    // Replace this with your actual Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby7vnPxVsRZNxxCFyITbonIJMOAshCQSrDdW_gZHj9XE9rQmYJT1iCURW0hNv_wVVD_/exec'
+    // Your Google Apps Script URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZwiiOxAsawLD1jolZe38S738yJa_dSE5OifcSR0yImlGMOQ4QoTUIXZuKdpGXnwU4/exec'
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -53,7 +53,6 @@ export default function ContactForm() {
             return false
         }
 
-        // Check if check-out is after check-in
         if (new Date(checkOut) <= new Date(checkIn)) {
             alert('Check-out date must be after check-in date')
             return false
@@ -65,7 +64,6 @@ export default function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        // Validate form
         if (!validateForm()) {
             return
         }
@@ -74,19 +72,38 @@ export default function ContactForm() {
         setSubmitStatus(null)
 
         try {
-            // Submit to Google Sheets
-            const response = await fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+            // Create form data for submission
+            const formDataToSend = new FormData()
 
-                body: JSON.stringify(formData)
+            // Add all form fields
+            Object.keys(formData).forEach(key => {
+                formDataToSend.append(key, formData[key])
             })
 
-            const result = await response.json()
+            // Submit using fetch with FormData (this bypasses CORS issues)
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: formDataToSend
+            })
 
-            if (result.status === 'success') {
+            // For Google Apps Script, we need to check the response differently
+            const responseText = await response.text()
+            console.log('Response:', responseText)
+
+            // Try to parse JSON, but handle HTML responses too
+            let result
+            try {
+                result = JSON.parse(responseText)
+            } catch {
+                // If we can't parse JSON, check if the response indicates success
+                if (responseText.includes('success') || response.ok) {
+                    result = { status: 'success' }
+                } else {
+                    throw new Error('Submission failed')
+                }
+            }
+
+            if (result.status === 'success' || response.ok) {
                 setSubmitStatus('success')
                 // Reset form
                 setFormData({
@@ -99,10 +116,6 @@ export default function ContactForm() {
                     roomType: 'standard',
                     message: ''
                 })
-
-                // Optional: Send confirmation email notification
-                // You can add email service here later
-
             } else {
                 throw new Error(result.message || 'Submission failed')
             }
@@ -115,11 +128,10 @@ export default function ContactForm() {
         }
     }
 
-    // Get today's date for min date validation
     const today = new Date().toISOString().split('T')[0]
 
     return (
-        <section id='contactForm' className={styles.contactForm}>
+        <section id='contact' className={styles.contactForm}>
             <div className={styles.container}>
                 <div className={styles.formSection}>
                     <div className={styles.formContent}>
