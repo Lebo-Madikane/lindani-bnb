@@ -20,7 +20,7 @@ export default function ContactForm() {
     const [submitStatus, setSubmitStatus] = useState(null)
 
     // Replace this with your actual Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyP-Y9zrO1YQ5fh2EUUHvOrOaFqY2tfzM6mSToIt9-MGv9MIKeLxixorba_5D9TWyc/exec'
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYIovvxdJOiuST2eeDQiOSFVGpyUOe7DD8dnOsoKG81HM6EEsDy9dDR3PUU0dTLrBL/exec'
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -119,7 +119,7 @@ export default function ContactForm() {
     const today = new Date().toISOString().split('T')[0]
 
     return (
-        <section id='contact' className={styles.contactForm}>
+        <section id='contactForm' className={styles.contactForm}>
             <div className={styles.container}>
                 <div className={styles.formSection}>
                     <div className={styles.formContent}>
