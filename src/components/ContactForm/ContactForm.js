@@ -131,7 +131,7 @@ export default function ContactForm() {
     const today = new Date().toISOString().split('T')[0]
 
     return (
-        <section id='contact' className={styles.contactForm}>
+        <section id='contactForm' className={styles.contactForm}>
             <div className={styles.container}>
                 <div className={styles.formSection}>
                     <div className={styles.formContent}>
