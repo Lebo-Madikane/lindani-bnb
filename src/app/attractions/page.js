@@ -59,7 +59,7 @@ export default function Highlights() {
                                     <div className={styles.cardLayout}>
                                         <div className={styles.imageContainer}>
                                             <div className={styles.placeholderImage}>
-                                                <Image className={styles.images} src={highlight.image} width={550} height={400} />
+                                                <Image alt='Attraction Image' className={styles.images} src={highlight.image} width={550} height={400} />
                                             </div>
                                         </div>
 
