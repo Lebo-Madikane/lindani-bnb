@@ -40,6 +40,10 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 
+    .images {
+        object-fit: cover;
+    }
+
 
     @include mobile {
         display: none; // Hide on mobile, show carousel instead
@@ -83,6 +87,16 @@
 .carouselSlide {
     flex: 0 0 calc(100% - 2rem);
     scroll-snap-align: start;
+
+    .serviceCard {
+        .cardContent {
+            .images {
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 // Carousel Navigation Buttons
@@ -158,6 +172,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    .images {
+        width: 100%;
+        height: 200px;
+    }
 
     .icon {
         font-size: 3rem;

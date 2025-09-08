@@ -86,7 +86,7 @@ export default function ServicesPage() {
                             {services.map((service) => (
                                 <div key={service.id} className={styles.serviceCard}>
                                     <div className={styles.serviceIcon}>
-                                        <Image className={styles.images} src={service.image} width="550" height="400"/>
+                                        <Image alt='Services Image' className={styles.images} src={service.image} width="550" height="400"/>
                                     </div>
                                     <h2>{service.title}</h2>
                                     <p className={styles.description}>{service.description}</p>

@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react'
 import Card from '../UI/Card/Card'
 import styles from './Services.module.scss'
+import Image from 'next/image'
 
 export default function Services() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -12,37 +13,43 @@ export default function Services() {
             id: 1,
             title: "Accommodation",
             description: "Enjoy single or sharing stylish en-suite rooms designed for comfort, offering modern amenities and a peaceful, home-like atmosphere.",
-            icon: "🏠"
+            icon: "🏠",
+            image: "/images/Accommodation.jpg"
         },
         {
             id: 2,
             title: "Catering",
             description: "Choose from delicious catered meals or enjoy independence with our fully equipped self-catering options.",
-            icon: "🍽️"
+            icon: "🍽️",
+            image: "/images/Catering.jpg"
         },
         {
             id: 3,
             title: "Conference Facilities",
             description: "Host productive meetings or events in our well-equipped conference spaces with modern technology and support.",
-            icon: "📆"
+            icon: "📆",
+            image: "/images/Conference.jpg"
         },
         {
             id: 4,
             title: "Shuttle Services",
             description: "Convenient, reliable shuttle service for guests, ensuring safe travel to nearby attractions and essential destinations.",
-            icon: "🚗"
+            icon: "🚗",
+            image: "/images/Shuttle.jpg"
         },
         {
             id: 5,
             title: "Laundry Service",
             description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
-            icon: "👕"
+            icon: "👕",
+            image: "/images/Laundry.jpg"
         },
         {
             id: 6,
             title: "Goods & Services",
             description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
-            icon: "🛍️"
+            icon: "🛍️",
+            image: "/images/GoodsAndServices.jpg"
         }
     ]
 
@@ -92,7 +99,7 @@ export default function Services() {
                     {services.map((service) => (
                         <Card key={service.id} variant="primary" padding="large" className={styles.serviceCard}>
                             <div className={styles.cardContent}>
-                                <div className={styles.icon}>{service.icon}</div>
+                                <Image alt='Services Image' src={service.image} className={styles.images} width={550} height={400} />
                                 <h3>{service.title}</h3>
                                 <p>{service.description}</p>
                             </div>
@@ -117,7 +124,7 @@ export default function Services() {
                                     <div key={service.id} className={styles.carouselSlide}>
                                         <Card variant="primary" padding="large" className={styles.serviceCard}>
                                             <div className={styles.cardContent}>
-                                                <div className={styles.icon}>{service.icon}</div>
+                                                <Image src={service.image} className={styles.images} width={550} height={400} />
                                                 <h3>{service.title}</h3>
                                                 <p>{service.description}</p>
                                             </div>
