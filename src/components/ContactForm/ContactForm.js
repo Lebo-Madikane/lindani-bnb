@@ -20,7 +20,7 @@ export default function ContactForm() {
     const [submitStatus, setSubmitStatus] = useState(null)
 
     // Replace this with your actual Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYIovvxdJOiuST2eeDQiOSFVGpyUOe7DD8dnOsoKG81HM6EEsDy9dDR3PUU0dTLrBL/exec'
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbynmv-X6VPgRw8H6BGgC3fggBFL_6wblAX7dgIPN2x-6N7MQLoVoF8WFbHgr7CbcumR/exec'
 
     const handleChange = (e) => {
         const { name, value } = e.target
