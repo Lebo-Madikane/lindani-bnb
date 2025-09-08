@@ -2,36 +2,37 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import styles from './page.module.scss'
 import Card from '../../components/UI/Card/Card'
+import Image from 'next/image'
 
 export default function Highlights() {
     const highlights = [
         {
             id: 1,
-            title: "Scenic Mountain Views",
-            description: "Wake up to breathtaking mountain vistas from every room. Our elevated location provides panoramic views that change beautifully throughout the day.",
-            icon: "🏔️",
-            image: "/images/mountain-view.jpg"
+            title: "Lubanzi Beach",
+            description: "The Wild Coast of South Africa is special. It is raw, dramatic, and breath-takingly beautiful. Lubanzi Beach is one of its little secrets – an unspoilt retreat from the real world; where white sands, clear blue skies, and the verdant greenery of the Transkei are celebrated in one very special spot.",
+            image: "/images/Lubanzi-Beach.jpg",
+            distance: "72,5 km",
         },
         {
             id: 2,
-            title: "Locally Sourced Cuisine",
-            description: "Experience authentic flavors with ingredients sourced from local farms and markets. Our chef creates memorable dining experiences.",
-            icon: "🥗",
-            image: "/images/local-cuisine.jpg"
+            title: "Hole in the Wall",
+            description: "The hills all around the Hole in the Wall are fantastic to climb and explore (often accompanied by one or two of the local beach dogs that are usually tame and playful, eager to welcome tourists to their home). There is also a grassy area where families can picnic, play, or simply relax as they enjoy the pure prettiness around them.",
+            image: "/images/Hole_In_The_Wall.jpg",
+            distance: "70,7 km",
         },
         {
             id: 3,
-            title: "Historic Architecture",
-            description: "Stay in a beautifully restored historic building that combines old-world charm with modern luxury and contemporary amenities.",
-            icon: "🏛️",
-            image: "/images/historic-building.jpg"
+            title: "Hluleka Nature Reserve",
+            description: "This Nature Reserve is a diverse ecosystem, combining lush indigenous forests, beautiful rocky coastline, unspoilt beaches and rolling grassland.",
+            image: "/images/Hluleka-Nature-Reserve.jpg",
+            distance: "101,3 km",
         },
         {
             id: 4,
-            title: "Personalized Experience",
-            description: "Our dedicated staff provides personalized attention to every guest, ensuring your unique needs and preferences are met.",
-            icon: "⭐",
-            image: "/images/personalized-service.jpg"
+            title: "Nelson Mandela Museum",
+            description: "The Nelson Mandela Museum offers a memorable cultural experience that gives insights into the life of Nelson Mandela, with guided tours and a heritage trail that follow his footsteps. Day) from 9h00 – 12h00 noon.",
+            image: "/images/Nelson-Mandela-Museum.jpg",
+            distance: "58,0 km",
         }
     ]
 
@@ -41,9 +42,9 @@ export default function Highlights() {
             <main className={styles.highlights}>
                 <div className={styles.container}>
                     <div className={styles.header}>
-                        <h2 className={styles.title}>Why Choose Lindani BnB</h2>
+                        <h2 className={styles.title}>Nearby Activities & Attractions</h2>
                         <p className={styles.subtitle}>
-                            Discover what makes us the perfect destination for your next getaway
+                            Discover what makes Eastern Cape the perfect destination for your next getaway
                         </p>
                     </div>
 
@@ -58,8 +59,7 @@ export default function Highlights() {
                                     <div className={styles.cardLayout}>
                                         <div className={styles.imageContainer}>
                                             <div className={styles.placeholderImage}>
-                                                <span className={styles.icon}>{highlight.icon}</span>
-                                                <p>Image Coming Soon</p>
+                                                <Image className={styles.images} src={highlight.image} width={550} height={400} />
                                             </div>
                                         </div>
 
@@ -68,8 +68,8 @@ export default function Highlights() {
                                             <p>{highlight.description}</p>
 
                                             <div className={styles.highlight}>
-                                                <span className={styles.highlightIcon}>✨</span>
-                                                <span>Signature Experience</span>
+                                                <span className={styles.highlightIcon}>📍</span>
+                                                <span>{highlight.distance}</span>
                                             </div>
                                         </div>
                                     </div>
