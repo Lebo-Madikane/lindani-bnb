@@ -1,6 +1,8 @@
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import styles from './page.module.scss'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Our Services - Lindani BnB',
@@ -11,51 +13,57 @@ export default function ServicesPage() {
     const services = [
         {
             id: 1,
-            title: "24/7 Room Service",
-            description: "Gourmet meals delivered directly to your room at any time of day or night. Our experienced chefs prepare fresh, delicious meals using locally sourced ingredients.",
-            features: ["Available 24/7", "Local ingredients", "Dietary accommodations", "In-room dining setup"],
-            price: "Included in stay",
-            icon: "🍽️"
+            title: "Accommodation",
+            description: "Enjoy single or sharing stylish en-suite rooms designed for comfort, offering modern amenities and a peaceful, home-like atmosphere.",
+            features: ["Bed Only: R500", "Bed & Breakfast: R580", "Couple & Breakfast: R660", "2 Double Beds(Breakfast): R1050"],
+            price: "Subject to availability",
+            icon: "🍽️",
+            image: "/images/Accommodation.jpg"
         },
         {
             id: 2,
-            title: "Personal Concierge",
-            description: "Our knowledgeable concierge team helps you discover the best local attractions, book tours, make restaurant reservations, and plan your perfect day.",
-            features: ["Local expertise", "Tour bookings", "Restaurant reservations", "Activity planning"],
-            price: "Complimentary",
-            icon: "🛎️"
+            title: "Catering",
+            description: "Choose from delicious catered meals or enjoy independence with our fully equipped self-catering options.",
+            features: ["Breakfast: R80", "Lunch: R70", "Lunch Pack: R100", "Dinner: R120"],
+            price: "Soft Drink & Dessert included",
+            icon: "🛎️",
+            image: "/images/Catering.jpg"
         },
         {
             id: 3,
-            title: "Spa & Wellness",
-            description: "Rejuvenate your body and mind with our full-service spa offering massage therapy, wellness treatments, and relaxation packages.",
-            features: ["Swedish massage", "Hot stone therapy", "Aromatherapy", "Couples packages"],
-            price: "From R400",
-            icon: "💆‍♀️"
+            title: "Conference Facilities",
+            description: "Host productive meetings or events in our well-equipped conference spaces with modern technology and support.",
+            features: ["Morning tea", "Afternoon tea", "Pen", "Exam pad"],
+            price: "R250 per person",
+            icon: "💆‍♀️",
+            image: "/images/Conference.jpg"
         },
         {
             id: 4,
-            title: "Airport Transfer",
-            description: "Travel in comfort with our luxury vehicle airport pickup and drop-off service. No stress, no hassle - we handle your transportation needs.",
-            features: ["Luxury vehicles", "Professional drivers", "Flight tracking", "Meet & greet service"],
-            price: "R200 one way",
-            icon: "🚗"
+            title: "Shuttle Services",
+            description: "Convenient, reliable shuttle service for guests, ensuring safe travel to nearby attractions and essential destinations.",
+            features: ["Reliable vehicles", "Professional drivers", "Air-condition", "Meet & greet service"],
+            price: "From R25 per km",
+            icon: "🚗",
+            image: "/images/Shuttle.jpg"
         },
         {
             id: 5,
             title: "Laundry Service",
-            description: "Keep your clothes fresh and clean with our professional laundry and dry cleaning service, featuring same-day turnaround.",
+            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
             features: ["Same-day service", "Dry cleaning", "Pressing included", "Eco-friendly products"],
-            price: "From R50 per item",
-            icon: "👕"
+            price: "Weighed service",
+            icon: "👕",
+            image: "/images/Laundry.jpg"
         },
         {
             id: 6,
-            title: "Private Tour Guide",
-            description: "Explore hidden gems and experience authentic local culture with our expert private tour guides who know all the best spots.",
-            features: ["Cultural tours", "Nature walks", "Historical sites", "Photography tours"],
+            title: "Goods & Services",
+            description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
+            features: ["Information Desk", "Shopping", "Nearby errands", "Bookings"],
             price: "From R500 per day",
-            icon: "🗺️"
+            icon: "🗺️",
+            image: "/images/GoodsAndServices.jpg"
         }
     ]
 
@@ -66,7 +74,7 @@ export default function ServicesPage() {
                 {/* Hero Section */}
                 <section className={styles.hero}>
                     <div className={styles.container}>
-                        <h1>Our Premium Services</h1>
+                        <h1>Our Services</h1>
                         <p>Experience exceptional hospitality with our comprehensive range of services designed to make your stay unforgettable.</p>
                     </div>
                 </section>
@@ -78,7 +86,7 @@ export default function ServicesPage() {
                             {services.map((service) => (
                                 <div key={service.id} className={styles.serviceCard}>
                                     <div className={styles.serviceIcon}>
-                                        {service.icon}
+                                        <Image className={styles.images} src={service.image} width="550" height="400"/>
                                     </div>
                                     <h2>{service.title}</h2>
                                     <p className={styles.description}>{service.description}</p>
@@ -106,7 +114,7 @@ export default function ServicesPage() {
                     <div className={styles.container}>
                         <h2>Ready to Experience Our Services?</h2>
                         <p>Book your stay today and enjoy all our premium services.</p>
-                        <button className={styles.ctaButton}>Book Now</button>
+                        <Link href="/#contactForm" ><button className={styles.ctaButton}>Book Now</button></Link>
                     </div>
                 </section>
             </main>
