@@ -57,6 +57,7 @@
             display: inline-block;
             font-size: 1.5rem;
             transition: transform 0.3s ease;
+            color: var(--accent-color);
 
             &:hover {
                 transform: scale(1.2);
