@@ -42,6 +42,7 @@
 
     .images {
         object-fit: cover;
+        margin-bottom: 5px;
     }
 
 
@@ -89,10 +90,13 @@
     scroll-snap-align: start;
 
     .serviceCard {
+        padding: 10px;
+
         .cardContent {
             .images {
                 width: 100%;
                 height: 100px;
+                margin-bottom: 5px;
                 object-fit: cover;
             }
         }
