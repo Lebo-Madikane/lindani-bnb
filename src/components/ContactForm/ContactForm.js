@@ -137,7 +137,7 @@ export default function ContactForm() {
                     <div className={styles.formContent}>
                         <h2 className={styles.title}>Book Your Stay</h2>
                         <p className={styles.subtitle}>
-                            Ready to experience Lindani BnB? Send us your details and we'll get back to you within 24 hours.
+                            Ready to experience Lindani BnB? Send us your details and we&apos;ll get back to you within 24 hours.
                         </p>
 
                         <Card variant="primary" padding="large" className={styles.formCard}>
