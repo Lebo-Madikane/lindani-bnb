@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .footer {
     background: linear-gradient(135deg, var(--primary-color), #1a3f1d);

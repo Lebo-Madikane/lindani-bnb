@@ -1,4 +1,8 @@
-// Responsive mixins
+@use "@/styles/variables" as *;
+
+// ========================
+// 📱 Responsive Mixins
+// ========================
 @mixin mobile {
     @media (max-width: #{$mobile - 1px}) {
         @content;
@@ -17,7 +21,9 @@
     }
 }
 
-// Flexbox mixins
+// ========================
+// ⚙️ Flexbox Helpers
+// ========================
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -30,7 +36,9 @@
     align-items: center;
 }
 
-// Container
+// ========================
+// 🧱 Container Wrapper
+// ========================
 @mixin container {
     max-width: 1200px;
     margin: 0 auto;

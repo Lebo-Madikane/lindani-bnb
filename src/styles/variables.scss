@@ -1,5 +1,14 @@
+// Sass built-in modules
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
 
-// Colors (based on Figma design)
+// ========================
+// 🌿 Lindani BnB Variables
+// ========================
+
+// 🎨 Colors (from Figma)
 :root {
     --primary-color: #2c5530;
     --secondary-color: #f5f5f5;
@@ -11,12 +20,28 @@
     --error: #dc3545;
 }
 
-// Typography
+// ========================
+// 🖋 Typography
+// ========================
 $font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-secondary: 'Playfair Display', serif;
 
+// Font sizes
+$font-size-small: 0.875rem;
+$font-size-base: 1rem;
+$font-size-large: 1.25rem;
+$font-size-title: 2rem;
 
-// Breakpoints 
+// ========================
+// 📱 Breakpoints
+// ========================
 $mobile: 768px !default;
 $tablet: 1024px !default;
 $desktop: 1200px !default;
+
+// ========================
+// 🧩 Z-index scale (optional)
+// ========================
+$z-header: 1000;
+$z-overlay: 1100;
+$z-modal: 1200;
