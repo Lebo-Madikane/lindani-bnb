@@ -1,6 +1,17 @@
 @use "@/styles/variables" as *;
 @use "@/styles/mixins" as *;
 
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #f5f5f5;
+    --accent-color: #d4a574;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --success: #28a745;
+    --error: #dc3545;
+}
+
 * {
     margin: 0;
     padding: 0;
