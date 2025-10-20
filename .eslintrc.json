@@ -1,3 +1,5 @@
+//Fix ESLint configuration
+
 {
     "extends": "next/core-web-vitals",
     "rules": {
