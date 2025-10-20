@@ -90,7 +90,7 @@ export default function Testimonials() {
                                         {renderStars(testimonial.rating)}
                                     </div>
                                     <p className={styles.testimonialText}>
-                                        "{testimonial.text.length > 120 ? testimonial.text.substring(0, 120) + '...' : testimonial.text}"
+                                        &ldquo;{testimonial.text.length > 120 ? testimonial.text.substring(0, 120) + '...' : testimonial.text}&rdquo;
                                     </p>
                                     <div className={styles.authorSmall}>
                                         <div className={styles.avatarSmall}>

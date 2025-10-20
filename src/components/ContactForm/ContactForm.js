@@ -283,7 +283,7 @@ export default function ContactForm() {
                                 {/* Status Messages */}
                                 {submitStatus === 'success' && (
                                     <div className={styles.successMessage}>
-                                        ✅ Thank you! We've received your booking request and will contact you within 24 hours to confirm your reservation.
+                                        ✅ Thank you! We&apos;ve received your booking request and will contact you within 24 hours to confirm your reservation.
                                     </div>
                                 )}
                                 {submitStatus === 'error' && (
