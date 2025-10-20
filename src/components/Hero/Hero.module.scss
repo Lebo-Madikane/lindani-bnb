@@ -8,11 +8,11 @@
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 
     .container {
-        @include container;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: center;
+        @include container;
 
         @include mobile {
             grid-template-columns: 1fr;

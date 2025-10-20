@@ -11,10 +11,10 @@
     z-index: 1000;
 
     .container {
-        @include container;
-        @include flex-between;
         padding: 1rem;
         height: 70px;
+        @include container;
+        @include flex-between;
     }
 }
 
