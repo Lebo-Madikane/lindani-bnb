@@ -1,5 +1,6 @@
 @use "@/styles/variables" as *;
 @use "@/styles/mixins" as *;
+@use "sass:color";
 
 .button {
     border: none;
@@ -24,7 +25,7 @@
     color: var(--white);
 
     &:hover:not(:disabled) {
-        background-color: darken(#2c5530, 10%);
+        background-color: color.adjust(#2c5530, $lightness: -10%);
         transform: translateY(-2px);
     }
 }
@@ -45,7 +46,7 @@
     color: var(--white);
 
     &:hover:not(:disabled) {
-        background-color: darken(#d4a574, 10%);
+        background-color: color.adjust(#d4a574, $lightness: -10%);
         transform: translateY(-2px);
     }
 }
