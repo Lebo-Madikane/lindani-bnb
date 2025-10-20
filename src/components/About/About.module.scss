@@ -6,21 +6,23 @@
     background-color: var(--white);
 
     .container {
-        @include container;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         text-align: center;
-
+        @include container;
+        
         @include mobile {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
+            //border: 2px solid red;
         }
     }
 }
 
 .imageContainer {
+
     .placeholderImage {
         width: 70%;
         height: 400px;
