@@ -15,7 +15,7 @@ export default function ServicesPage() {
             id: 1,
             title: "Accommodation",
             description: "Enjoy single or sharing stylish en-suite rooms designed for comfort, offering modern amenities and a peaceful, home-like atmosphere.",
-            features: ["Bed Only: R500", "Bed & Breakfast: R580", "Couple & Breakfast: R660", "2 Double Beds(Breakfast): R1050"],
+            features: ["Bed Only", "Bed & Breakfast", "Couple & Breakfast", "2 Double Beds(Breakfast)"],
             price: "Subject to availability",
             icon: "🍽️",
             image: "/images/Accommodation.jpg"
@@ -24,8 +24,8 @@ export default function ServicesPage() {
             id: 2,
             title: "Catering",
             description: "Choose from delicious catered meals or enjoy independence with our fully equipped self-catering options.",
-            features: ["Breakfast: R80", "Lunch: R70", "Lunch Pack: R100", "Dinner: R120"],
-            price: "Soft Drink & Dessert included",
+            features: ["Breakfast", "Lunch", "Lunch Pack", "Dinner"],
+            price: "Soft Drink & Dessert",
             icon: "🛎️",
             image: "/images/Catering.jpg"
         },
@@ -43,7 +43,7 @@ export default function ServicesPage() {
             title: "Shuttle Services",
             description: "Convenient, reliable shuttle service for guests, ensuring safe travel to nearby attractions and essential destinations.",
             features: ["Reliable vehicles", "Professional drivers", "Air-condition", "Meet & greet service"],
-            price: "From R25 per km",
+            price: "Per km",
             icon: "🚗",
             image: "/images/Shuttle.jpg"
         },
@@ -52,7 +52,7 @@ export default function ServicesPage() {
             title: "Goods & Services",
             description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
             features: ["Information Desk", "Shopping", "Nearby errands", "Bookings"],
-            price: "From R500 per day",
+            price: "Per Service",
             icon: "🗺️",
             image: "/images/GoodsAndServices.jpg"
         },
