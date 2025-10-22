@@ -13,7 +13,7 @@ export default function About() {
 
                 <div className={styles.imageContainer}>
                     <div className={styles.placeholderImage}>
-                        <Image src='/images/AboutImg.webp' alt='About Us Image' className={styles.aboutImage} width={550} height={400} priority={true} />
+                        <Image src='/images/Accommodation.jpg' alt='About Us Image' className={styles.aboutImage} width={550} height={400} priority={true} />
                     </div>
                 </div>
 

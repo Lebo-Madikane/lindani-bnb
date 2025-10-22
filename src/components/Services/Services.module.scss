@@ -36,9 +36,11 @@
 
 // Desktop Grid Layout
 .desktopGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
+
 
     .images {
         object-fit: cover;
@@ -158,7 +160,7 @@
 
 // Service Card Content
 .serviceCard {
-    width: 90%;
+    max-width: 350px;
     height: 100%;
     transition: all 0.3s ease;
 

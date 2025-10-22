@@ -25,10 +25,10 @@ export default function Services() {
         },
         {
             id: 3,
-            title: "Conference Facilities",
-            description: "Host productive meetings or events in our well-equipped conference spaces with modern technology and support.",
-            icon: "📆",
-            image: "/images/Conference.jpg"
+            title: "Laundry Service",
+            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
+            icon: "👕",
+            image: "/images/Laundry.jpg"
         },
         {
             id: 4,
@@ -39,18 +39,11 @@ export default function Services() {
         },
         {
             id: 5,
-            title: "Laundry Service",
-            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
-            icon: "👕",
-            image: "/images/Laundry.jpg"
-        },
-        {
-            id: 6,
             title: "Goods & Services",
             description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
             icon: "🛍️",
             image: "/images/GoodsAndServices.jpg"
-        }
+        },
     ]
 
     const nextSlide = () => {

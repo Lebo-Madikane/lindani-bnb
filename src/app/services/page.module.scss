@@ -50,8 +50,9 @@
 }
 
 .servicesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 
     @include mobile {
@@ -61,6 +62,7 @@
 }
 
 .serviceCard {
+    max-width: 350px;
     background: var(--white);
     border-radius: 15px;
     padding: 2rem;

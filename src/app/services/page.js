@@ -31,12 +31,12 @@ export default function ServicesPage() {
         },
         {
             id: 3,
-            title: "Conference Facilities",
-            description: "Host productive meetings or events in our well-equipped conference spaces with modern technology and support.",
-            features: ["Morning tea", "Afternoon tea", "Pen", "Exam pad"],
-            price: "R250 per person",
-            icon: "💆‍♀️",
-            image: "/images/Conference.jpg"
+            title: "Laundry Service",
+            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
+            features: ["Same-day service", "Dry cleaning", "Pressing included", "Eco-friendly products"],
+            price: "Weighed service",
+            icon: "👕",
+            image: "/images/Laundry.jpg"
         },
         {
             id: 4,
@@ -49,22 +49,13 @@ export default function ServicesPage() {
         },
         {
             id: 5,
-            title: "Laundry Service",
-            description: "On-site laundry services available for your convenience, keeping your stay fresh, clean, and stress-free.",
-            features: ["Same-day service", "Dry cleaning", "Pressing included", "Eco-friendly products"],
-            price: "Weighed service",
-            icon: "👕",
-            image: "/images/Laundry.jpg"
-        },
-        {
-            id: 6,
             title: "Goods & Services",
             description: "We provide a reliable supply of essential goods and services, ensuring guests’ needs are always met.",
             features: ["Information Desk", "Shopping", "Nearby errands", "Bookings"],
             price: "From R500 per day",
             icon: "🗺️",
             image: "/images/GoodsAndServices.jpg"
-        }
+        },
     ]
 
     return (

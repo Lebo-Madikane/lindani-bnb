@@ -38,7 +38,6 @@ export default function Footer() {
                             <li><a href="#services">Catering</a></li>
                             <li><a href="#services">Shuttle Services</a></li>
                             <li><a href="#services">Laundry</a></li>
-                            <li><a href="#services">Conference Facilities</a></li>
                         </ul>
                     </div>
 
@@ -47,7 +46,7 @@ export default function Footer() {
                         <h4>Contact Information</h4>
                         <div className={styles.contactItem}>
                             <span>📞</span>
-                            <p>047 5770 268</p>
+                            <p>078 616 4132 / 076 374 0285</p>
                         </div>
                         <div className={styles.contactItem}>
                             <span>📧</span>
@@ -55,7 +54,7 @@ export default function Footer() {
                         </div>
                         <div className={styles.contactItem}>
                             <span>📍</span>
-                            <p>Elliotdale, 5070, Eastern Cape<br />South Africa</p>
+                            <p>Prison Street, Elliotdale, 5070, Eastern Cape</p>
                         </div>
                     </div>
                 </div>
