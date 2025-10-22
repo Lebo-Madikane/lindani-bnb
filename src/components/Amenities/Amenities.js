@@ -55,9 +55,9 @@ export default function Amenities() {
         },
         {
             id: 8,
-            title: "Conference Room",
-            description: "Professional meeting space for business travelers",
-            icon: "💼",
+            title: "Catering",
+            description: "Optional in-house food menu",
+            icon: "🥘",
             featured: false
         },
         {
