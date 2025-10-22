@@ -303,7 +303,7 @@ export default function ContactForm() {
                                 <div className={styles.contactIcon}>📞</div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>047 5770 268</p>
+                                    <p>078 616 4132 / 076 374 0285</p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>
@@ -317,7 +317,7 @@ export default function ContactForm() {
                                 <div className={styles.contactIcon}>📍</div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>Elliotdale, 5070, Eastern Cape<br /> South Africa</p>
+                                    <p>Prison Street, Elliotdale, 5070, Eastern Cape</p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>
